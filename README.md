@@ -20,16 +20,10 @@ git clone https://github.com/matschik/krdict.git
 cd krdict
 ```
 
-3. Install the dependencies using npm or yarn:
+3. Install the dependencies using npm / pnpm / yarn:
 
 ```
 npm install
-```
-
-or
-
-```
-yarn install
 ```
 
 4. Create a .env file with the following variables:
