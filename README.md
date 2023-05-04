@@ -98,3 +98,7 @@ krdict relies on the following dependencies:
 - [xml2js](https://www.npmjs.com/package/xml2js) - to parse XML data
 
 All dependencies are specified in the `package.json` file and can be installed using npm.
+
+## Credits
+
+The krdict tool is built on top of the [FOSS Korean dictionary](https://github.com/spellcheck-ko/korean-dict-nikl) by the National Institute of Korean Language. We would like to thank the institute for their valuable contribution to the open-source community.
