@@ -75,7 +75,6 @@ node 4_mongo.js
 ├── 2_convert.js      # module to convert XML files to JSON files
 ├── 3_jsondb.js       # module to store data in MongoDB database
 ├── 4_mongo.js        # module to query MongoDB database
-├── ndjsonFile.js     # module to read ndjson files
 ├── node_modules/     # dependencies
 ├── output/           # directory to store downloaded data and converted data
 │   ├── 1_krdict_xml/ # directory to store downloaded XML data
@@ -94,7 +93,7 @@ krdict relies on the following dependencies:
 - [glob](https://www.npmjs.com/package/glob) - to find files using glob patterns
 - [got](https://www.npmjs.com/package/got) - to make HTTP requests
 - [mongodb](https://www.npmjs.com/package/mongodb) - to interact with MongoDB
-- [ndjson](https://www.npmjs.com/package/ndjson) - to read and write ndjson files
+- [jsonl-db](https://www.npmjs.com/package/jsonl-db) - to manage jsonl files
 - [xml2js](https://www.npmjs.com/package/xml2js) - to parse XML data
 
 All dependencies are specified in the `package.json` file and can be installed using npm.

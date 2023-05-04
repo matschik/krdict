@@ -1,15 +1,15 @@
 import "dotenv/config";
 import { MongoClient } from "mongodb";
-import ndjsonFile from "./ndjsonFile.js";
+import jsonlFile from "jsonl-db";
 
 const LOCAL_DB_PATH = "output/3_jsondb/krdict.jsonl";
 const dbName = process.env.MONGO_DBNAME || "krdict";
-const dbCollectionName = process.env.MONGO_COLLECTION || "lexicalEntry";
+const dbCollectionName = process.env.MONGO_COLLECTION || "lexicalEntry2";
 
 const client = new MongoClient(process.env.MONGO_URL);
 
 async function main() {
-  const localDb = ndjsonFile(LOCAL_DB_PATH);
+  const localDb = jsonlFile(LOCAL_DB_PATH);
   await client.connect();
   console.info("Connected successfully to Mongo server");
   const db = client.db(dbName);
@@ -20,7 +20,7 @@ async function main() {
   const localDbCount = await localDb.count();
 
   let c = 0;
-  await localDb.readByLineBatch(async (batch) => {
+  await localDb.readByBatch(async (batch) => {
     await collection.insertMany(batch);
     c += batch.length;
     console.info(c, `/${localDbCount}`, "inserted");
