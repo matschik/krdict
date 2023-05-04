@@ -103,6 +103,6 @@ All dependencies are specified in the `package.json` file and can be installed u
 
 The krdict tool is built on top of the [FOSS Korean dictionary](https://github.com/spellcheck-ko/korean-dict-nikl) by the National Institute of Korean Language. We would like to thank the institute for their valuable contribution to the open-source community.
 
-## ⚖️ License
+## License
 
 MIT. Made with 💖
