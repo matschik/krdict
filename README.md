@@ -36,7 +36,7 @@ MONGO_URL=mongodb://localhost:27017/krdict
 
 The krdict tool includes four main modules:
 
-- `1_download.js`: downloads Korean-English dictionary data from the Krdict API and saves it to XML files in the `output/1_krdict_xml` directory.
+- `1_download.js`: downloads Korean-English dictionary data from the [spellcheck-ko/korean-dict-nikl](https://github.com/spellcheck-ko/korean-dict-nikl) repository and saves it to XML files in the `output/1_krdict_xml` directory.
 - `2_convert.js`: converts the XML files to JSON files and saves them to the `output/2_krdict_json` directory.
 - `3_jsondb.js`: reads the JSON files and stores the data in a MongoDB database.
 - `4_mongo.js`: queries the MongoDB database and prints the results to the console.
@@ -71,7 +71,7 @@ node 4_mongo.js
 
 ```
 .
-├── 1_download.js     # module to download data from Krdict API
+├── 1_download.js     # module to download data from spellcheck-ko/korean-dict-nikl repository
 ├── 2_convert.js      # module to convert XML files to JSON files
 ├── 3_jsondb.js       # module to store data in MongoDB database
 ├── 4_mongo.js        # module to query MongoDB database
