@@ -1,4 +1,4 @@
-# krdict
+# krdict 🇰🇷
 
 krdict is an open-source command-line tool that allows users to download, convert, and store Korean-English dictionary data in a MongoDB database. The tool can be used by developers and data scientists who are working with Korean language data.
 
