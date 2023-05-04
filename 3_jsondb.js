@@ -15,10 +15,7 @@ async function main() {
   for (const jsonPath of jsonFilePaths) {
     const data = await readJSON(jsonPath);
     const words = data.LexicalResource.Lexicon[0].LexicalEntry;
-
-    for (const word of words) {
-      await db.add(word);
-    }
+    await db.addMany(words);
   }
 }
 

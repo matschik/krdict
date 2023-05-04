@@ -16,11 +16,11 @@ async function main() {
     const dest = `${DEST_DIR}/${path.parse(file).name}.json`;
 
     if (await pathExists(dest)) {
-      console.log(file, "already exists");
+      console.log(dest, "already exists");
       continue;
     }
 
-    console.log(file, "start");
+    console.log(dest, "start");
     let content = await readFile(file, { encoding: "utf-8" });
 
     // fix invalid xml
@@ -32,9 +32,9 @@ async function main() {
       await writeJSON(dest, json, {
         spaces: 2,
       });
-      console.log(file, "success");
+      console.log(dest, "success");
     } catch (err) {
-      console.log(file, "error");
+      console.log(dest, "error");
       console.error(err);
     }
   }

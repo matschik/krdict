@@ -4,7 +4,7 @@ import jsonlFile from "jsonl-db";
 
 const LOCAL_DB_PATH = "output/3_jsondb/krdict.jsonl";
 const dbName = process.env.MONGO_DBNAME || "krdict";
-const dbCollectionName = process.env.MONGO_COLLECTION || "lexicalEntry2";
+const dbCollectionName = process.env.MONGO_COLLECTION || "lexicalEntry";
 
 const client = new MongoClient(process.env.MONGO_URL);
 
@@ -24,7 +24,7 @@ async function main() {
     await collection.insertMany(batch);
     c += batch.length;
     console.info(c, `/${localDbCount}`, "inserted");
-  }, 500);
+  }, 750);
 
   console.info(
     `Inserted ${c} documents into the collection '${dbCollectionName}' in db '${dbName}'`
